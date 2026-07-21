@@ -1,0 +1,4 @@
+# Statik site — build adımı yok, kök dizin yayınlanır.
+[build]
+  publish = "."
+  command = ""

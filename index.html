@@ -18,7 +18,7 @@
   h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; letter-spacing: -0.01em; }
   @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-  .wrap { max-width: 1180px; margin: 0 auto; background: #FBF5F1; overflow: hidden; }
+  .wrap { width: 100%; margin: 0 auto; background: #FBF5F1; overflow: hidden; }
 
   /* Header */
   .header { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 28px; background: rgba(251,245,241,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid #EFDCD9; }
@@ -119,6 +119,12 @@
   .copyright .demo { color: #6E5E64; }
 
   /* ===== Responsive ===== */
+  /* Geniş ekranlarda içeriği tüm sayfaya yay, kenarlara ferah boşluk bırak */
+  @media (min-width: 1400px) {
+    .header, .hero, .features, .sec-head, .products, .steps { padding-left: 5vw; padding-right: 5vw; }
+    .why, .cargo { margin-left: 5vw; margin-right: 5vw; }
+    .footer { padding-left: 5vw; padding-right: 5vw; }
+  }
   @media (max-width: 960px) {
     .hero { grid-template-columns: 1fr; gap: 32px; padding: 40px 24px 44px; }
     .hero h1 { font-size: 42px; }
